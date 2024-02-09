@@ -1,4 +1,3 @@
-```markdown
 # zk-SNARK Project Utilities
 
 This repository contains a collection of scripts designed to facilitate the development of zero-knowledge succinct non-interactive arguments of knowledge (zk-SNARKs) projects using the Groth16 algorithm. These utilities streamline the process of writing circuits, generating Powers of Tau, building circuits, generating proofs, and verifying them.
