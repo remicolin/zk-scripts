@@ -1,3 +1,11 @@
+# How to use it
+
+```bash
+wget https://github.com/remicolin/zk-scripts/archive/refs/heads/main.zip -O zk-scripts.zip
+unzip zk-scripts.zip
+rm zk-scripts.zip
+```
+
 # zk-SNARK Project Utilities
 
 This repository contains a collection of scripts designed to facilitate the development of zero-knowledge succinct non-interactive arguments of knowledge (zk-SNARKs) projects using the Groth16 algorithm. These utilities streamline the process of writing circuits, generating Powers of Tau, building circuits, generating proofs, and verifying them.
