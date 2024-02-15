@@ -4,7 +4,11 @@
 wget https://github.com/remicolin/zk-scripts/archive/refs/heads/main.zip -O zk-scripts.zip
 unzip zk-scripts.zip
 rm zk-scripts.zip
+if [ ! -d "scripts" ]; then
+    mv zk-scripts-main scripts
+fi
 ```
+
 
 # zk-SNARK Project Utilities
 
