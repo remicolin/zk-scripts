@@ -2,10 +2,17 @@
 
 # Compile the circom circuit to generate R1CS, WASM, and symbol files, placing outputs in the build directory
 echo -e "\033[0;32mCompiling circuit with circom...\033[0m"
-circom circuit.circom --r1cs --wasm --sym --output build
+output=$(circom circuit.circom --r1cs --wasm --sym --output build 2>&1)
+echo "$output"
+
+# Check for errors in the output
+if echo "$output" | grep -i "error"; then
+    echo -e "\033[0;31mError found in compilation. Exiting script.\033[0m"
+    exit 1
+fi
 
 # Change directory to build where the compiled files are located
-cd build
+cd build || exit
 
 # Begin the setup phase for Groth16 proving system using the compiled circuit and the final Powers of Tau file
 echo -e "\033[0;32mRunning snarkjs groth16 setup...\033[0m"
